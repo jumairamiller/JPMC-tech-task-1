@@ -1,6 +1,14 @@
 import unittest
 from client import getDataPoint, getRatio
 
+'''NOTE:
+  The quotes is a list of individual quotes that you can pass into the getDataPoint function. 
+  Each quote represents a possible variation of quote data but if getDataPoint was modified 
+  properly, then it should return a tuple that contains 
+  (stock, top_bid_price, top_ask_price, stock_price_based_on_formula).. 
+  That’s what you will have to assert for for each quote you pass in. 
+  (meaning you’ll have to iterate quotes list and make assertions per iteration)
+'''
 
 class ClientTest(unittest.TestCase):
   def test_getDataPoint_calculatePrice(self):
@@ -42,3 +50,9 @@ class ClientTest(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+'''Task 1 BONUS 
+  - wrote assertions for getDataPoint tests
+  - wrote two tests for getRatio to test the outcomes for when priceB is zero and when priceA is zero
+'''
